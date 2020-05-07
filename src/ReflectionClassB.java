@@ -1,6 +1,11 @@
 
-public class ReflectionClassB extends ReflectionClassA {
+public class ReflectionClassB{
+	public void execute(){
+		System.out.println(this.getClass().getName() + "のexecute()メソッドが実行されました");
+	}
+	
+	
 	public static void executeS(){
-		System.out.println("ReflectionClassBのexecute()メソッドが呼び出されました");
+		System.out.println("ReflectionClassBのexecuteS()メソッドが呼び出されました");
 	}
 }
