@@ -7,7 +7,7 @@ public class ReflectionClassA{
 	}
 	
 	
-	public static void executeS(){	//Staticメソッドは
+	public static void executeS(){	//Staticメソッド
 		System.out.println("ReflectionClassAのexecuteS()メソッドが実行されました");
 	}
 }
