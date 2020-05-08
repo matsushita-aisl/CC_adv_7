@@ -15,6 +15,7 @@ public class ReflectionTest {
 		Object O = null;
 		
 		inputClassName();
+		scanner.close();
 		
 		try{
 			C = Class.forName("ReflectionClass" + str);	//入力に合わせてClassのインスタンス生成
