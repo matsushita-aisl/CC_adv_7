@@ -1,3 +1,6 @@
+import java.lang.invoke.MethodHandles;
+
+
 
 public class ReflectionClassB{
 	
@@ -8,6 +11,6 @@ public class ReflectionClassB{
 	
 	
 	public static void executeS(){
-		System.out.println("ReflectionClassBのexecuteS()メソッドが実行されました");
+		System.out.println(MethodHandles.lookup().toString() + "のexecuteS()メソッドが実行されました");
 	}
 }

@@ -1,3 +1,6 @@
+import java.lang.invoke.MethodHandles;
+
+
 
 public class ReflectionClassA{
 	
@@ -7,7 +10,7 @@ public class ReflectionClassA{
 	}
 	
 	
-	public static void executeS(){	//Staticメソッドは
-		System.out.println("ReflectionClassAのexecuteS()メソッドが実行されました");
+	public static void executeS(){	//staticでもMethodHandles::lookupにより可能
+		System.out.println(MethodHandles.lookup().toString() + "のexecuteS()メソッドが実行されました");
 	}
 }
