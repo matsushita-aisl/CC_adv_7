@@ -5,9 +5,8 @@ import java.util.Scanner;
 
 
 public class ReflectionTest {
-	static public Scanner scanner = new Scanner(System.in);
 	static String str;
-	
+
 	
 	public static void main(String[] args) {
 		Class<?> C = null;		
@@ -15,7 +14,6 @@ public class ReflectionTest {
 		Object O = null;
 		
 		inputClassName();
-		scanner.close();
 		
 		try{
 			C = Class.forName("ReflectionClass" + str);	//入力に合わせてClassのインスタンス生成
@@ -41,14 +39,16 @@ public class ReflectionTest {
 	
 	
 	static void inputClassName(){
-		while(true){
-			System.out.print("実行するクラス名の入力してください [A/B] > ");
-			str = scanner.next();
-			
-			if(str.equals("A") || str.equals("B")){
-				break;
+		try(Scanner scanner = new Scanner(System.in)){
+			while(true){
+				System.out.print("実行するクラス名の入力してください [A/B] > ");
+				str = scanner.next();
+				
+				if(str.equals("A") || str.equals("B")){
+					break;
+				}
+				System.out.println("[Error]不正な入力です");
 			}
-			System.out.println("[Error]不正な入力です");
 		}
 	}
 }
